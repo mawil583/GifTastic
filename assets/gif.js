@@ -8,7 +8,7 @@ $(document).ready(function () {
     function makeButtons() {
         $("#buttons").empty();
         for (let i = 0; i < gifArr.length; i++) {
-            let btn = $(`<button type="button" class="btn btn-outline-primary">`);
+            let btn = $(`<button type="button" class="btn btn-outline-primary m-2">`);
             btn.attr("data-name", gifArr[i]);
             btn.text(gifArr[i]);
             $("#buttons").append(btn);
@@ -35,15 +35,15 @@ $(document).ready(function () {
                 for (let i = 0; i < 10; i++) {
                     let rating = response.data[i].rating;
                     console.log(rating);
-                    let gifDiv = $("<div>");
+                    let gifDiv = $("<div class='gif'>");
                     let gifHeading = $("<h2>");
                     gifHeading.attr("data-rating", rating);
                     gifHeading.text(`Rating: ${rating}`);
-                    $("#gif-display").append(gifHeading);
-                    let gifUrl = response.data[i].images.original.url;
+                    gifDiv.append(gifHeading);
+                    let gifUrl = response.data[i].images.fixed_height.url;
                     let gifImage = $("<img>");
                     gifImage.attr("src", gifUrl);
-                    gifDiv.append(gifHeading);
+                    // gifDiv.append(gifHeading);
                     gifDiv.append(gifImage);
                     $("#gif-display").append(gifDiv);
                 }

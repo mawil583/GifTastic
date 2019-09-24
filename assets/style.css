@@ -2,13 +2,27 @@ div {
     color:red;
 }
 .col-8 {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .col-12 {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 .col-4 {
-    border: 2px solid green;
+    /* border: 2px solid green; */
+}
+div.gif {
+    /* border: 2px solid pink; */
+    width: 33%;
+    margin-bottom: 1.5em;
+    /* float: left; */
+    /* max-width: 35%; */
+}
+img {
+    width: 100%;
+}
+h2 {
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 0px !important;
 }
