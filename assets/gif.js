@@ -55,6 +55,7 @@ apiCall();
 
     // This is the onclick event for top buttons
     $("#buttons").on("click", ".btn", function () {
+        $("#click-prompt").text("Now click on a gif to animate it!")
         query = $(this).attr("data-name");
         apiCall(query);
     })

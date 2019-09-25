@@ -1,6 +1,7 @@
-div.col-12 {
-    color: #007bff;
-    font-size: 1.2em;
+div.col-12, h3 {
+    color: #003976 !important;
+    font-size: 1.2em !important;
+    padding-top: 0.5em;
 }
 
 div.gif {
@@ -15,7 +16,14 @@ img {
 h2 {
     background-color: rgb(232, 232, 232);
     margin-bottom: 0px !important;
+    color: #003976;
 }
+
+
+#click-prompt {
+    margin-bottom: 1em 1em;
+}
+
 
 @media only screen and (max-width: 960px) {
     div.gif {
