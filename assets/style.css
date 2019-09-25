@@ -1,28 +1,25 @@
-div {
-    color:red;
-}
-.col-8 {
-    /* border: 2px solid red; */
-}
-
-.col-12 {
-    /* border: 2px solid blue; */
+div.col-12 {
+    color: #007bff;
+    
+    font-size: 1.2em;
 }
 
-.col-4 {
-    /* border: 2px solid green; */
-}
 div.gif {
-    /* border: 2px solid pink; */
     width: 33%;
     margin-bottom: 1.5em;
-    /* float: left; */
-    /* max-width: 35%; */
 }
+
 img {
     width: 100%;
 }
+
 h2 {
     background-color: rgb(232, 232, 232);
     margin-bottom: 0px !important;
+}
+
+@media only screen and (max-width: 960px) {
+    div.gif {
+        width: 49%;
+    }
 }
