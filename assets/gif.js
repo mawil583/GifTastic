@@ -69,6 +69,13 @@ apiCall();
             $(this).attr("src", still);
         }
     })
+
+    // This brings up mobile keyboard to search for gifs
+    $("#input").on("click", function() {
+        console.log("testing keyboard mobile")
+        $("#input").focus();
+    });
+
     // This is the onclick event for the form submission
     $(document).on("click", ".submit", function(event) {
         event.preventDefault();
