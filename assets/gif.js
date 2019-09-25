@@ -35,8 +35,10 @@ $(document).ready(function () {
                     gifHeading.attr("data-rating", rating);
                     gifHeading.text(`Rating: ${rating}`);
                     gifDiv.append(gifHeading);
-                    let gifUrl = response.data[i].images.fixed_height.url;
+                    let gifUrl = response.data[i].images.fixed_height_still.url;
                     let gifImage = $("<img>");
+                    gifImage.attr("data-animate", response.data[i].images.fixed_height.url);
+                    gifImage.attr("data-still", response.data[i].images.fixed_height_still.url)
                     gifImage.attr("src", gifUrl);
                     // gifDiv.append(gifHeading);
                     gifDiv.append(gifImage);
@@ -54,6 +56,16 @@ apiCall();
         apiCall(query);
     })
 
+    // this is onclick event for animating gifs
+    $("#gif-display").on("click", "img", function() {
+        let still = $(this).attr("data-still");
+        let animate = $(this).attr("data-animate")
+        if ($(this).attr("src") == still) {
+            $(this).attr("src", animate);
+        } else {
+            $(this).attr("src", still);
+        }
+    })
     // This is the onclick event for the form submission
     $(document).on("click", ".submit", function(event) {
         event.preventDefault();
