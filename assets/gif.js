@@ -1,19 +1,17 @@
 $(document).ready(function () {
-
+// global declarations
     let gifArr = ["Skateboarding", "Snowboarding",
         "Ultimate Frisbee", "Rock Climbing", "Motocross",
         "BMX", "UFC", "Martial Arts", "High Dive",
         "Slacklining"];
-
     let lowerCaseGifArr = [];
     for (let i = 0;i < gifArr.length; i++) {
         lowerCaseGifArr.push(gifArr[i].toLowerCase())
     }
     let lowerCaseQuery;
-    console.log(lowerCaseGifArr);
+    let query = "";
 
     function makeButtons() {
-        // $("#buttons").empty();
         for (let i = 0; i < gifArr.length; i++) {
             let btn = $(`<button type="button" class="btn btn-outline-primary m-2">`);
             btn.attr("data-name", gifArr[i]);
@@ -23,7 +21,6 @@ $(document).ready(function () {
     }
     makeButtons();
 
-    let query = "";
     function apiCall() {
         let queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=QPaP2fIctkKZ5QVbYKccw58Ue96VR3Et&q=${query}&limit=10&offset=0&lang=en`
         $.ajax(
@@ -47,7 +44,6 @@ $(document).ready(function () {
                     gifImage.attr("data-animate", response.data[i].images.fixed_height.url);
                     gifImage.attr("data-still", response.data[i].images.fixed_height_still.url)
                     gifImage.attr("src", gifUrl);
-                    // gifDiv.append(gifHeading);
                     gifDiv.append(gifImage);
                     $("#gif-display").append(gifDiv);
                 }
