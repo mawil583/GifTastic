@@ -1,6 +1,5 @@
 div.col-12 {
     color: #007bff;
-    
     font-size: 1.2em;
 }
 
@@ -21,5 +20,11 @@ h2 {
 @media only screen and (max-width: 960px) {
     div.gif {
         width: 49%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    div.gif {
+        width: 99%;
     }
 }
