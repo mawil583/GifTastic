@@ -5,6 +5,13 @@ $(document).ready(function () {
         "BMX", "UFC", "Martial Arts", "High Dive",
         "Slacklining"];
 
+    let lowerCaseGifArr = [];
+    for (let i = 0;i < gifArr.length; i++) {
+        lowerCaseGifArr.push(gifArr[i].toLowerCase())
+    }
+    let lowerCaseQuery;
+    console.log(lowerCaseGifArr);
+
     function makeButtons() {
         // $("#buttons").empty();
         for (let i = 0; i < gifArr.length; i++) {
@@ -69,9 +76,10 @@ apiCall();
     // This is the onclick event for the form submission
     $(document).on("click", ".submit", function(event) {
         event.preventDefault();
-        query = $("#input").val();
-        if (query && gifArr.indexOf(query) == -1) {
-            gifArr.push(query);
+        lowerCaseQuery = $("#input").val().toLowerCase();
+        query = $("#input").val()
+        if (query && lowerCaseGifArr.indexOf(lowerCaseQuery) == -1) {
+            lowerCaseGifArr.push(lowerCaseQuery);
             let btn = $(`<button type="button" class="btn btn-outline-primary m-2">`);
             btn.attr("data-name", query);
             btn.text(query);
