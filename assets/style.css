@@ -4,6 +4,16 @@ div.col-12, h3 {
     padding-top: 0.5em;
 }
 
+.bottom {
+    background-color: rgb(250, 255, 305);
+    border-bottom: 2px solid blue;
+    padding-bottom: 0.5em;
+}
+
+body {
+    background-image: url(../../TriviaGame/assets/images/light_grey.png)
+}
+
 div.gif {
     width: 33%;
     margin-bottom: 1.5em;

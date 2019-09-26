@@ -1,4 +1,6 @@
 $(document).ready(function () {
+// This is extreme-sports themed
+
 // global declarations
     let gifArr = ["Skateboarding", "Snowboarding",
         "Ultimate Frisbee", "Rock Climbing", "Motocross",
