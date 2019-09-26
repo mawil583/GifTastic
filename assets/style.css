@@ -22,10 +22,15 @@ div.gif {
     width: 33%;
     margin-bottom: 1.5em;
     border: 1px solid #003976;
+    /* display: block; */
+    /* display: block !important; */
+    /* height: 20vmax; */
+    /* font-size: 0 !important;  */
 }
 
 img {
     width: 100%;
+    vertical-align: top !important;
 }
 
 h2 {
