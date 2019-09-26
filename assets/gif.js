@@ -65,7 +65,7 @@ apiCall();
     // this is onclick event for animating gifs
     $("#gif-display").on("click", "img", function() {
         let still = $(this).attr("data-still");
-        let animate = $(this).attr("data-animate")
+        let animate = $(this).attr("data-animate");
         if ($(this).attr("src") == still) {
             $(this).attr("src", animate);
         } else {
