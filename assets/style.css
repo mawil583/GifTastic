@@ -21,6 +21,7 @@ body {
 div.gif {
     width: 33%;
     margin-bottom: 1.5em;
+    border: 1px solid #003976;
 }
 
 img {
@@ -28,9 +29,11 @@ img {
 }
 
 h2 {
-    background-color: rgb(232, 232, 232);
+    background-color: #003976;
     margin-bottom: 0px !important;
-    color: #003976;
+    /* color: rgb(232, 232, 232); */
+    color: rgb(232, 232, 232) !important;
+    
 }
 
 
