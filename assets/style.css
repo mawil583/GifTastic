@@ -21,11 +21,6 @@ body {
 div.gif {
     width: 33%;
     margin-bottom: 1.5em;
-    
-    /* display: block; */
-    /* display: block !important; */
-    /* height: 20vmax; */
-    /* font-size: 0 !important;  */
 }
 
 img {
@@ -33,23 +28,17 @@ img {
     vertical-align: top !important;
     border: 1px solid #003976 !important;
     border-radius: 0% 0% 5% 5%;
-    /* height: max-content !important; */
 }
 
 h2 {
     background-color: #003976;
     margin-bottom: 0px !important;
-    /* border-radius: 20% 20% 0% 0% !important; */
-    /* color: rgb(232, 232, 232); */
     color: rgb(232, 232, 232) !important;
-    
 }
-
 
 #click-prompt {
     margin-bottom: 1em 1em;
 }
-
 
 @media only screen and (max-width: 1300px) {
     div.gif {

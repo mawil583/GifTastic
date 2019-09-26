@@ -9,7 +9,7 @@ $(document).ready(function () {
     let lowerCaseGifArr = [];
     for (let i = 0;i < gifArr.length; i++) {
         lowerCaseGifArr.push(gifArr[i].toLowerCase())
-    }
+    };
     let lowerCaseQuery;
     let query = "";
 
@@ -44,7 +44,7 @@ $(document).ready(function () {
                     let gifUrl = response.data[i].images.fixed_height_still.url;
                     let gifImage = $("<img>");
                     gifImage.attr("data-animate", response.data[i].images.fixed_height.url);
-                    gifImage.attr("data-still", response.data[i].images.fixed_height_still.url)
+                    gifImage.attr("data-still", response.data[i].images.fixed_height_still.url);
                     gifImage.attr("src", gifUrl);
                     gifDiv.append(gifImage);
                     $("#gif-display").append(gifDiv);
@@ -57,7 +57,7 @@ apiCall();
 
     // This is the onclick event for top buttons
     $("#buttons").on("click", ".btn", function () {
-        $("#click-prompt").text("Now click on a GIF to animate it!")
+        $("#click-prompt").text("Now click on a GIF to animate it!");
         query = $(this).attr("data-name");
         apiCall(query);
     })
