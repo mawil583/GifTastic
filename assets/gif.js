@@ -82,6 +82,7 @@ apiCall();
     // This is the onclick event for the form submission
     $(document).on("click", ".submit", function(event) {
         event.preventDefault();
+
         lowerCaseQuery = $("#input").val().toLowerCase();
         query = $("#input").val()
         if (query && lowerCaseGifArr.indexOf(lowerCaseQuery) == -1) {
@@ -91,5 +92,6 @@ apiCall();
             btn.text(query);
             $("#buttons").append(btn);
         };
+        $("#input").val("");
     })
 });
